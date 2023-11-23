@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right , #f64f59 ,#c471ed)
+    ,#12c2e9;
+    /* border: 1px solid red; */
+}
+
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    background:rgba(255,255,255,.2);
+    box-shadow: 0 0 50px rgba(0,0,0,.1);
+    padding: 40px;
+    /* border: 1px solid red; */
+}
+
+.from-wrapper {
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 1s ease-in-out;
+}
+/* ซ่อน sign-in โดยใช้ scale(0) */
+.wrapper.active .from-wrapper.sign-in {
+    transform: scale(0) translate(-300px , 500px) ;
+}
+/* นำ sign-up ขึ้นมาแทนโดยใช้ top:0 , transform:scale (1); */
+.wrapper .from-wrapper.sign-Up{
+    position: absolute;
+    transform: scale(0) translate(200px , -500px);
+    top: 0;
+}
+
+.wrapper.active .from-wrapper.sign-Up {
+    transform: scale(1) ;
+}
+h2 {
+
+    font-size:30px;
+    text-align: center;
+    color: #fff;
+}
+
+.input-group {
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+
+.input-group label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translatey(-50%);
+    color: #fff;
+    font-size: 16px;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.input-group input{
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 0 5px;
+    background: transparent;
+    outline: none;
+    border: none;
+}
+/* ทำข้อความส่วน label ให้ลอยขึ้นเมื่อคลิก ตามที่เรากำหนดเป็น px */
+.input-group input:focus~label,
+.input-group input:valid~label {
+    top: -5px;
+}
+
+
+
+
+
+.remember {
+    margin: -5px 0 15px 10px;
+}
+
+.remember label {
+    font-size: 14px;
+    color: #fff;
+}
+
+.remember label input{
+    accent-color: #f4157e;
+}
+
+button {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    color: #ffffff;
+    background: #f4157e;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.SignUp-link {
+    font-size: 16px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.SignUp-link p {
+    color: #fff;
+}
+
+.SignUp-link p a {
+    color: #ff0077;
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+.SignUp-link p a:hover {
+    text-decoration: underline;
+}
+
+.social-platform {
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+}
+
+.social-icon a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    margin: 15px 6px 0;
+    transition: .3s;
+    background:transparent;
+}
+
+.social-icon a:hover {
+    background: #fff;
+}
+
+.social-icon a i {
+    color:#fff;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.social-icon a:hover i{
+    color: red;
+}
+
